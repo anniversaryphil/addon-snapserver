@@ -11,14 +11,14 @@ RUN \
     && rm -fr \
         /tmp/*
         
-#Install Librespot
+#Install Librespot - omitted as not using spotify
 #RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/ librespot=0.5.0-r0
 
 
-#Install Snapcast
+#Install Snapcast - updated to current version as of 2024-11-08
 RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/ snapcast-server=0.29.0-r0
 
-#Install Snapweb
+#Install Snapweb correct version as of 2024-11-08
 RUN \
     wget https://github.com/badaix/snapweb/releases/download/v0.8.0/snapweb.zip && \
     unzip -o snapweb.zip -d /usr/share/snapserver/snapweb/ && \
